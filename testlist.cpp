@@ -3,22 +3,22 @@
 
 #include "intlist.h"
 
-#include <cstdlib> // provides atoi
+#include <cstdlib> // Provides atoi
 #include <iostream>
 using namespace std;
 
-// creates two lists (one empty), and does simple tests of list methods
+// Creates two lists (one empty), and does simple tests of list methods
 int main(int argc, char *argv[]) {
-
     IntList list1, list2;
     int first = 0, second = 0, last = 0, initial_size;
 
-    // append command line arguments to list1
+    // Append command line arguments to list1
     if (argc < 2) {
         cout << "error: need at least one int arg on command line" << endl;
         cout << "usage: " << argv[0] << " int [int ...]" << endl;
         return 1;
     }
+
     initial_size = argc - 1;
     for (int i = 1; i < argc; i++) {
         int value = atoi(argv[i]);
@@ -40,9 +40,9 @@ int main(int argc, char *argv[]) {
     cout << "   contains " << first << " ? "
         << (list1.contains(first)? "yes" : "no") << endl;
     cout << "   contains " << second << " ? "
-        << (list1.contains(second)? "yes" : "no") << endl;
+        << (list1.contains(second) ? "yes" : "no") << endl;
     cout << "   contains " << last << " ? "
-        << (list1.contains(last)? "yes" : "no") << endl;
+        << (list1.contains(last) ? "yes" : "no") << endl;
     cout << "   contains " << sum << " ? "
         << (list1.contains(sum)? "yes" : "no") << endl;
     cout << "   max: " << list1.max() << endl;
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
     cout << endl << "   count: " << list2.count() << endl;
     cout << "   sum: " << list2.sum() << endl;
     cout << "   contains 1 ? "
-        << (list2.contains(1)? "yes" : "no") << endl;
+         << (list2.contains(1) ? "yes" : "no") << endl;
     cout << "   max: " << list2.max() << endl;
     cout << "   average: " << list2.average() << endl;
     cout << "   List 2 after insertFirst(3), then insertFirst(1): \n   ";
